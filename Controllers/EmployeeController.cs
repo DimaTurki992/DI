@@ -7,36 +7,30 @@ namespace DIP.Controllers
     [ApiController]
     public class EmployeeController : Controller
     {
-        public EmployeeController()
+        private readonly IDataAccessService _dataAccessService;
+        public EmployeeController(IDataAccessService dataAccessService)
         {
-
+            _dataAccessService = dataAccessService;
         }
 
         [HttpGet()]
         public void PrintEmployeeInfo()
         {
-            Logger logger = new Logger();
             // constructor injection
-            Employee employee1 = new Employee(logger);
-            employee1.FirstName = "Dima";
-            employee1.LastName = "Turki";
+            Employee employee1 = _dataAccessService.Get(1);
             employee1.PrintEmployeeInfo();
 
 
             // property injection
-            Employee employee2 = new Employee();
-            employee2.Logger = logger;
-            employee2.FirstName = "Dima";
-            employee2.LastName = "Turki";
+            Employee employee2 = _dataAccessService.Get(2);
             employee2.PrintEmployeeInfo();
 
-
-            // method injection
-            Employee employee3 = new Employee();
+            // method injection 
+            Employee employee3 = _dataAccessService.Get(3);
+            Logger logger = new Logger();
             employee3.SetDependency(logger);
-            employee3.FirstName = "Dima";
-            employee3.LastName = "Turki";
             employee3.PrintEmployeeInfo();
+
 
         }
     }
