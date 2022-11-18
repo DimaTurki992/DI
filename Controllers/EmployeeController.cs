@@ -17,11 +17,11 @@ namespace DIP.Controllers
         public void PrintEmployeeInfo()
         {
             // constructor injection
-            Employee employee1 = _dataAccessService.Get(1);
+            Employee employee1 = _dataAccessService.GetEmployeeById(1);
             employee1.PrintEmployeeInfo();
 
             // method injection 
-            Employee employee3 = _dataAccessService.Get(2);
+            Employee employee3 = _dataAccessService.GetEmployeeById(2);
             Logger logger = new Logger();
             employee3.SetDependency(logger);
             employee3.PrintEmployeeInfo();

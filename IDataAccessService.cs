@@ -4,8 +4,8 @@ namespace DIP
 {
     public interface IDataAccessService
     {
-        List<Employee> GetAll();
-        Employee Get(int id);
-        Employee Add(Employee data);
+        List<Employee> GetAllEmployees();
+        Employee GetEmployeeById(int id);
+        Employee AddEmployee(Employee data);
     }
 }

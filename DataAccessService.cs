@@ -24,17 +24,17 @@ namespace DIP
             }
         };
 
-        public List<Employee> GetAll()
+        public List<Employee> GetAllEmployees()
         {
             return Employees;
         }
 
-        public Employee Get(int id)
+        public Employee GetEmployeeById(int id)
         {
             return Employees.Find(e => e.Id == id);
         }
 
-        public Employee Add(Employee data)
+        public Employee AddEmployee(Employee data)
         {
             Employees.Add(data);
             return data;
