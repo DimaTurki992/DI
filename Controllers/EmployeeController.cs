@@ -13,20 +13,11 @@ namespace DIP.Controllers
             _dataAccessService = dataAccessService;
         }
 
-        [HttpGet()]
-        public void PrintEmployeeInfo()
+        [HttpGet("{id}")]
+        public void PrintEmployeeInfo(int id)
         {
-            // constructor injection
-            Employee employee1 = _dataAccessService.GetEmployeeById(1);
+            Employee employee1 = _dataAccessService.GetEmployeeById(id);
             employee1.PrintEmployeeInfo();
-
-            // method injection 
-            Employee employee3 = _dataAccessService.GetEmployeeById(2);
-            Logger logger = new Logger();
-            employee3.SetDependency(logger);
-            employee3.PrintEmployeeInfo();
-
-
         }
     }
 }

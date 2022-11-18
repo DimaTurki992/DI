@@ -20,6 +20,7 @@ namespace DIP
         {
             services.AddControllers();
             services.AddTransient<IDataAccessService, DataAccessService>();
+            services.AddTransient<ILogger, Logger>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

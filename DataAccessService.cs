@@ -4,18 +4,15 @@ namespace DIP
 {
     public class DataAccessService : IDataAccessService
     {
-        static Logger logger = new Logger();
         private static List<Employee> Employees = new List<Employee>()
         {
-            // constructor injection
-            new Employee(logger)
+            new Employee()
             {
                 Id = 1,
                 FirstName = "Dima",
                 LastName = "Turki"
             },
 
-            // dependency to be injected using Method Injection
             new Employee()
             {
                 Id = 2,
