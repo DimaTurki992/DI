@@ -18,7 +18,7 @@ namespace DIP
             // dependency to be injected using Method Injection
             new Employee()
             {
-                Id = 3,
+                Id = 2,
                 FirstName = "Test1",
                 LastName = "Test2"
             }

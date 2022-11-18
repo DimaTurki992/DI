@@ -20,13 +20,8 @@ namespace DIP.Controllers
             Employee employee1 = _dataAccessService.Get(1);
             employee1.PrintEmployeeInfo();
 
-
-            // property injection
-            Employee employee2 = _dataAccessService.Get(2);
-            employee2.PrintEmployeeInfo();
-
             // method injection 
-            Employee employee3 = _dataAccessService.Get(3);
+            Employee employee3 = _dataAccessService.Get(2);
             Logger logger = new Logger();
             employee3.SetDependency(logger);
             employee3.PrintEmployeeInfo();
