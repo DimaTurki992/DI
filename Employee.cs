@@ -5,12 +5,6 @@ namespace DIP
     {
         private ILogger _logger;
 
-        // property/setter injection
-
-        public ILogger Logger
-        {
-            set { this._logger = value; }
-        }
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

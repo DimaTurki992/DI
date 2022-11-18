@@ -15,15 +15,6 @@ namespace DIP
                 LastName = "Turki"
             },
 
-            // property injection
-            new Employee()
-            {
-                Id = 2,
-                FirstName = "Kevin",
-                LastName = "Marshall",
-                Logger = logger
-            },
-
             // dependency to be injected using Method Injection
             new Employee()
             {
