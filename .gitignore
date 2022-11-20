@@ -11,6 +11,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -271,3 +272,4 @@ __pycache__/
 
 # Cake - Uncomment if you are using it
 # tools/
+DIP.sln
